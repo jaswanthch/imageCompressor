@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #1E1E1E;
+  color: #FFFFFF;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Toast Customization */
+.compression-toast {
+  @apply border-l-4 border-[#00A3FF];
+}
+
+.compression-toast[data-type="loading"] {
+  @apply bg-[#00A3FF]/10;
+}
+
+.compression-toast[data-type="success"] {
+  @apply bg-[#00A3FF]/20;
+}
+
+.compression-toast[data-type="error"] {
+  @apply bg-red-500/20 border-red-500;
+}
